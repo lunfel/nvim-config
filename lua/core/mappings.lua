@@ -275,6 +275,10 @@ M.telescope = {
 
     -- theme switcher
     ["<leader>th"] = { "<cmd> Telescope themes <CR>", "nvchad themes" },
+
+    -- Mathieu Custom
+    ["<leader>fj"] = { "<cmd> Telescope lsp_document_symbols <CR>", "pick symbol inside buffer"},
+    ["<leader>fk"] = { "<cmd> Telescope lsp_references <CR>", "pick reference from word under cursor"}
   },
 }
 
