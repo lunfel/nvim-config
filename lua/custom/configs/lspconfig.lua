@@ -1,6 +1,7 @@
 
 local on_attach = require("plugins.configs.lspconfig").on_attach
 local capabilities = require("plugins.configs.lspconfig").capabilities
+local rename_file = require("custom.commands").rename_file
 
 local lspconfig = require "lspconfig"
 
@@ -14,9 +15,21 @@ lspconfig.rust_analyzer.setup({
 lspconfig.tsserver.setup({
   on_attach = on_attach,
   capabilities = capabilities,
-  filetypes = {"typescriptreact"},
-  root_dir = lspconfig.util.root_pattern("package.json"),
-  cmd = {'typescript-language-server', '--stdio'},
+  --filetypes = {"typescriptreact"},
+  --root_dir = lspconfig.util.root_pattern("package.json"),
+  --cmd = {'typescript-language-server', '--stdio'},
+  -- commands = {
+  --   RenameFile = {
+  --     rename_file,
+  --     description = "Lsp Rename File"
+  --   }
+  -- }
+})
+
+lspconfig.html.setup({
+  on_attach = on_attach,
+  capabilities = capabilities,
+  -- filetypes = {"typescriptreact"}
 })
 
 --[[

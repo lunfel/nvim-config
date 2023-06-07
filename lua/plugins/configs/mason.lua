@@ -1,5 +1,8 @@
+local extra_lsp = require("custom.configs.mason")
+
 local options = {
-  ensure_installed = { "lua-language-server" }, -- not an option from mason.nvim
+  ensure_installed = { "lua-language-server", table.unpack(extra_lsp
+  ) }, -- not an option from mason.nvim
 
   PATH = "skip",
 

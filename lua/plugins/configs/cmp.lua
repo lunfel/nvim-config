@@ -117,4 +117,21 @@ if cmp_style ~= "atom" and cmp_style ~= "atom_colored" then
   options.window.completion.border = border "CmpBorder"
 end
 
+-- cmp.event:on('menu_opened', function(evt)
+--   require('custom/autocomplete').is_autocompleting = true
+-- end
+-- )
+--
+-- cmp.event:on('menu_closed', function(evt)
+--   require('custom/autocomplete').is_autocompleting = false
+-- end
+-- )
+--
+-- vim.cmd([[
+-- augroup KeyEntered
+--   autocmd!
+--   autocmd InsertCharPre * lua require('custom/autocomplete').update_undo_join_when_autocompleting()
+-- augroup END
+-- ]])
+
 return options

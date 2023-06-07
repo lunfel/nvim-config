@@ -7,8 +7,10 @@ M.load_config = function()
 
   if chadrc_path then
     local chadrc = dofile(chadrc_path)
-
-    config.mappings = M.remove_disabled_keys(chadrc.mappings, require "core.mappings")
+   
+    --config.mappings = M.remove_disabled_keys(chadrc.mappings, require "core.mappings")
+    local mappings = merge_tb("force", require "core.mappings", require "custom.mappings")
+    config.mappings = M.remove_disabled_keys(chadrc.mappings, mappings)
     config = merge_tb("force", config, chadrc)
   end
 
