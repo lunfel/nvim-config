@@ -21,6 +21,10 @@ M.general = {
     --   end,
     --   "goto prev buffer"
     -- }
+    ["<leader>mc"] = { "<cmd> Telescope git_bcommits <CR>", "git commits (buffer)" },
+    ["<leader>mb"] = { "<cmd> Telescope git_branches <CR>", "git branches" },
+    ["<leader>mt"] = { "<cmd> Telescope git_branches <CR>", "git branches" },
+    ["<leader>ma"] = { "<cmd> Telescope advanced_git_search diff_branch_file <CR>", "git diff buffer with branch"}
   },
   v = {
     ["gs"] = { "^", "Go to first non-blank character in line" },

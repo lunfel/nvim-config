@@ -15,6 +15,14 @@ lspconfig.rust_analyzer.setup({
 lspconfig.tsserver.setup({
   on_attach = on_attach,
   capabilities = capabilities,
+  opts = function ()
+    -- https://github.com/typescript-language-server/typescript-language-server
+    return {
+      preferences = {
+        importModuleSpecifierPreference = "non-relative"
+      }
+    }
+  end
   --filetypes = {"typescriptreact"},
   --root_dir = lspconfig.util.root_pattern("package.json"),
   --cmd = {'typescript-language-server', '--stdio'},

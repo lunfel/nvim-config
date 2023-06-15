@@ -20,36 +20,30 @@ local plugins = {
     end,
     lazy = true,
     event = "VeryLazy"
-  }
+  },
+  {
+    "aaronhallaert/advanced-git-search.nvim",
+    dependencies = {
+      "nvim-telescope/telescope.nvim",
+      -- to show diff splits and open commits in browser
+      "tpope/vim-fugitive",
+      -- to open commits in browser with fugitive
+      "tpope/vim-rhubarb",
+      -- OPTIONAL: to replace the diff from fugitive with diffview.nvim
+      -- (fugitive is still needed to open in browser)
+      -- "sindrets/diffview.nvim",
+    }
+  },
+  -- Removing temporarily because I am not sure it is working properly
   -- {
-  --   "alvan/vim-closetag",
-    -- event = "InsertEnter",
-    -- config = function ()
-    --   vim.g.closetag_filenames = '*.html,*.xhtml,*.phtml,*.xml,*.jsx,*.tsx'
-    --   vim.g.closetag_xhtml_filenames = '*.xhtml,*.xml,*.jsx,*.tsx'
-    --   vim.g.closetag_filetypes = 'html,xhtml,phtml,xml,js,ts,jsx,tsx'
-    --   vim.g.closetag_xhtml_filetypes = 'xhtml,js,ts,jsx,tsx'
-    --   vim.g.closetag_emptyTags_caseSensitive = 1
-    --   vim.g.closetag_regions = {
-    --     ['typescript.tsx'] = 'jsxRegion,tsxRegion',
-    --     ['javascript.jsx'] = 'jsxRegion'
-    --   }
-    --   vim.g.closetag_shortcut = '>'
-    -- end
+  --   "rmagatti/auto-session",
+  --   config = function ()
+  --     require("auto-session").setup {
+  --       log_level = "error",
+  --       auto_session_allowed_dirs = { "~/projects" }
+  --     }
+  --   end
   -- }
 }
-
--- vim.cmd([[
--- let g:closetag_filenames = '*.html,*.xhtml,*.jsx,*.tsx'
--- let g:closetag_xhtml_filenames = '*.xhtml,*.jsx,*.tsx'
--- let g:closetag_filetypes = 'html,js'
--- let g:closetag_xhtml_filetype = 'xhtml,jsx,tsx'
--- let g:closetag_emptyTags_caseSensitive = 1
--- let g:closetag_regions = {
---   \ 'typescript.tsx': 'jsxRegion,tsxRegion',
---   \ 'javascript.jsx': 'jsxRegion',
---   \ }
--- let g:closetag_shortcut = '>'
--- ]])
 
 return plugins
