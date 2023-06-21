@@ -23,6 +23,7 @@ local plugins = {
   },
   {
     "aaronhallaert/advanced-git-search.nvim",
+    version = "ah/fix_diff_branch_file_quotes",
     dependencies = {
       "nvim-telescope/telescope.nvim",
       -- to show diff splits and open commits in browser

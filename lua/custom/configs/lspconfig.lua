@@ -40,22 +40,27 @@ lspconfig.html.setup({
   -- filetypes = {"typescriptreact"}
 })
 
---[[
-lspconfig.intelephense.setup({
+lspconfig.phpactor.setup({
   on_attach = on_attach,
   capabilities = capabilities,
-  formatting = {
-    enable = false,
-    tabSize = 4
-  },
-  settings = {
-    intelephense = {
-      formatting = {
-        tabSize = 4
-      }
-    }
-  },
-  filetypes = {"php"},
-  root_dir = lspconfig.util.root_pattern("composer.json"),
+  -- formatting = {
+  --   enable = false,
+  --   tabSize = 4
+  -- },
 })
-]]--
+
+-- lspconfig.intelephense.setup({
+--   on_attach = on_attach,
+--   capabilities = capabilities,
+--   formatting = {
+--     enable = false,
+--     tabSize = 4
+--   },
+--   settings = {
+--     intelephense = {
+--       formatting = {
+--         tabSize = 4
+--       }
+--     }
+--   }
+-- })

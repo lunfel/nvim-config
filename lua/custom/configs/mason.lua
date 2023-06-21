@@ -9,6 +9,7 @@ local extra_lsp = {
   "jsonls",
   "spectral", -- open api
   "psalm", -- php
+  "phpactor",
   "vuels",
   "lemminx", -- xml
   "yamlls"
