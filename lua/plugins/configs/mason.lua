@@ -1,8 +1,8 @@
 local extra_lsp = require("custom.configs.mason")
+local merge_tb = vim.tbl_deep_extend
 
 local options = {
-  ensure_installed = { "lua-language-server", table.unpack(extra_lsp
-  ) }, -- not an option from mason.nvim
+  ensure_installed = merge_tb("force", { "lua-language-server"}, extra_lsp), -- not an option from mason.nvim
 
   PATH = "skip",
 
